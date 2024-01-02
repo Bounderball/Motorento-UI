@@ -1,0 +1,43 @@
+<table>
+    <tr>
+        <th></th>
+        <th>ID</th>
+        <th>Model ID</th>
+        <th>Mileage</th>
+        <th>Pic URL (Optional)</th>
+        <th>In working order</th>
+        <th>License Plate Number</th>
+        <th>Branch</th>
+    </tr>
+    <tr *ngFor="let i of cars">
+        <td>
+            <span class="link" (click)="editCar(i)">Edit</span>
+            <br />
+            <span class="link" (click)="deleteCar(i)" >Delete</span>
+        </td>
+        <td>{{i.id}}</td>
+        <td>{{i.modelId}}</td>
+        <td>{{i.mileage}}</td>
+        <td><a href={{i.pic}}>{{i.pic}}</a></td>
+        <td>{{i.inWorkingOrder|inWorkingOrder}}</td>
+        <td>{{i.licensePlateNumber}}</td>
+        <td>{{i.branch}}</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="link" (click)="addCar()">Add</span>
+        </td>
+        <td></td>
+        <td><input type="number" [(ngModel)]="carModelId" /></td>
+        <td><input type="number" [(ngModel)]="carMileage" /></td>
+        <td><input type="text" [(ngModel)]="carPic" /></td>
+        <td>
+            <select [(ngModel)]="carInWorkingOrder">
+                <option value=true>Yes</option>
+                <option value=false>No</option>
+            </select>
+        </td>
+        <td><input type="text" [(ngModel)]="carLicensePlateNumber" /></td>
+        <td><input type="number" [(ngModel)]="carBranch" /></td>
+    </tr>
+</table>

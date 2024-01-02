@@ -1,0 +1,28 @@
+.link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+table, tr, td, th {
+    border: solid black 1px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    text-align: center;
+}

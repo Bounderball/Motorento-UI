@@ -1,0 +1,29 @@
+<div>
+    <span class="link" (click)="navigate('home')">Home</span>
+    <span class="link" (click)="navigate('catalog')">Catalog</span>
+</div>
+<br />
+<div>
+    <h1>Order history</h1>
+</div>
+<br />
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Rent date</th>
+        <th>Due return date</th>
+        <th>Date returned</th>
+        <th>Total cost</th>
+    </tr>
+    <tr *ngFor="let i of historyOrders">
+        <td>{{i.id}}</td>
+        <td>{{i.manufacturer}}</td>
+        <td>{{i.modelName}}</td>
+        <td>{{i.startDate|date}}</td>
+        <td>{{i.endDate|date}}</td>
+        <td>{{i.dateReturned|date}}</td>
+        <td>{{i.totalCost}}</td>
+    </tr>
+</table>

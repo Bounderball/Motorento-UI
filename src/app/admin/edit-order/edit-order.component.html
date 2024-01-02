@@ -1,0 +1,24 @@
+<h1>Edit order</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Rent date</th>
+        <th>Return date</th>
+        <th>Date returned (Optional)</th>
+        <th>User name</th>
+        <th>Car ID</th>
+    </tr>
+    <tr>
+       <td>{{editOrder.id}}</td>
+       <td><input type="date" [(ngModel)]="startDateString" /></td>
+       <td><input type="date" [(ngModel)]="endDateString" /></td>
+       <td><input type="date" [(ngModel)]="dateReturnedString" /></td>
+       <td><input type="text" [(ngModel)]="editOrder.userName" /></td>
+       <td><input type="number" [(ngModel)]="editOrder.carId" /></td>
+    </tr>
+</table>
+
+<div id="bottomPane">
+    <span class="link" (click)="save()">Save</span>
+    <span class="link" (click)="back()">Cancel</span>
+</div>

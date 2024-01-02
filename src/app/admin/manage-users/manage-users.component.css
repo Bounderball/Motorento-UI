@@ -1,0 +1,22 @@
+table, tr, td, th {
+    border: solid black 1px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    text-align: center;
+}
+
+.link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+input {
+    width: 95%;
+    text-align: center;
+}

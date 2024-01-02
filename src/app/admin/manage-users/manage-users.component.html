@@ -1,0 +1,55 @@
+<table>
+    <tr>
+        <th></th>
+        <th>User name</th>
+        <th>Password</th>
+        <th>Role</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Birth date</th>
+        <th>Sex</th>
+        <th>Email</th>
+        <th>Pic URL</th>
+    </tr>
+    <tr *ngFor="let i of users">
+        <td>
+            <span class="link" (click)="editUser(i)">Edit</span>
+            <br />
+            <span class="link" (click)="deleteUser(i)">Delete</span>
+        </td>
+        <td>{{i.userName}}</td>
+        <td>{{i.password}}</td>
+        <td>{{i.role}}</td>
+        <td>{{i.firstName}}</td>
+        <td>{{i.lastName}}</td>
+        <td>{{i.birthDate|date}}</td>
+        <td>{{i.sex|sex}}</td>
+        <td>{{i.email}}</td>
+        <td><a href={{i.pic}}>{{i.pic}}</a></td>
+    </tr>
+    <tr>
+        <td>
+            <span class="link" (click)="addUser()">Add</span>
+        </td>
+        <td><input type="text" [(ngModel)]="userUserName" /></td>
+        <td><input type="text" [(ngModel)]="userPassword" /></td>
+        <td>
+            <select [(ngModel)]="userRole">
+                <option value="user">User</option>
+                <option value="employee">Employee</option>
+                <option value="admin">Admin</option>
+            </select>
+        </td>
+        <td><input type="text" [(ngModel)]="userFirstName" /></td>
+        <td><input type="text" [(ngModel)]="userLastName" /></td>
+        <td><input type="date" [(ngModel)]="userBirthDate" /></td>
+        <td>
+            <select [(ngModel)]="userSex">
+                <option value=true>Male</option>
+                <option value=false>Female</option>
+            </select>
+        </td>
+        <td><input type="text" [(ngModel)]="userEmail" /></td>
+        <td><input type="text" [(ngModel)]="userPic" /></td>
+    </tr>
+</table>

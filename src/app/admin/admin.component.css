@@ -1,0 +1,23 @@
+.link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#backToHomeLink {
+    display: block;
+    text-align: center;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+.chosenLink {
+    text-decoration: none;
+    cursor: none;
+    color: black;
+}

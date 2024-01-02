@@ -1,0 +1,31 @@
+<h1>Edit model</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Daily price</th>
+        <th>Delay price per day</th>
+        <th>Manufacture year</th>
+        <th>Gear</th>
+    </tr>
+    <tr>
+        <td>{{editModel.id}}</td>
+        <td><input type="text" [(ngModel)]="editModel.manufacturer" /></td>
+        <td><input type="text" [(ngModel)]="editModel.modelName" /></td>
+        <td><input type="number" [(ngModel)]="editModel.dailyPrice" /></td>
+        <td><input type="number" [(ngModel)]="editModel.delayPricePerDay" /></td>
+        <td><input type="number" [(ngModel)]="modelManufactureYearNumbered" /></td>
+        <td>
+            <select [(ngModel)]="editModel.gear">
+                <option value=false>Manual</option>
+                <option value=true>Automatic</option>
+            </select>
+        </td>
+    </tr>
+</table>
+
+<div id="bottomPane">
+    <span class="link" (click)="save()">Save</span>
+    <span class="link" (click)="back()">Cancel</span>
+</div>

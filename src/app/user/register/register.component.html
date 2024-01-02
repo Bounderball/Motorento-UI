@@ -1,0 +1,18 @@
+<div id="backToHomeLink">
+    <span class="link" (click)="navigate('home')">Back to home</span>
+</div>
+<div id="registerForm">
+    <h1>Register</h1>
+    User name: <input type="text" #txtUserName id="txtUserName" [(ngModel)]="inputUserName" /><br />
+    Password: <input type="password" #txtPassword id="txtPassword" [(ngModel)]="inputPassword" /><br />
+    First name: <input type="text" #txtFirstName id="txtFirstName" [(ngModel)]="inputFirstName" /><br />
+    Last name: <input type="text" #txtLastName id="txtLastName" [(ngModel)]="inputLastName" /><br />
+    Sex: <select [(ngModel)]="inputSex">
+        <option value=0>Female</option>
+        <option value=1>Male</option>
+    </select><br />
+    Email: <input type="email" #txtEmail id="txtEmail" [(ngModel)]="inputEmail" /><br />
+    Birth date: <input type="date" #txtBirthDate id="txtBirthDate" [(ngModel)]="inputBirthDate" />&nbsp;(Optional)<br />
+    Photo URL: <input type="text" #txtPic id="txtPic" [(ngModel)]="inputPic" />&nbsp;(Optional)<br /><br />
+    <input type="button" #btnLogin id="btnLogin" value="Register" (click)="register()" /><br />
+</div>

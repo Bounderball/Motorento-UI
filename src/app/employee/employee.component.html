@@ -1,0 +1,11 @@
+<span id="backToHomeLink" class="link" (click)="navigate('user/home')">Back to home</span><br />
+<div>
+    <label for="txtLicensePlateNumber">License plate number: </label>
+    <input type="text" name="txtLicensePlateNumber" [(ngModel)]="inputLicensePlateNumber" />
+    <input type="button" value="Return car" (click)="returnCar()" />
+</div>
+<br />
+<div id="costsPane">
+    <span class="costDisplay" *ngIf="displayDelayCost">Extra cost due to return delay: {{displayDelayCost}}</span><br />
+    <span class="costDisplay" *ngIf="displayTotalCost">Total cost: {{displayTotalCost}}</span>
+</div>

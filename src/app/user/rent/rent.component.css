@@ -1,0 +1,50 @@
+div {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+span {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+img {
+    width: 20rem;
+}
+
+#chosenCarDetails, #rentDateInputs, #costDisplay {
+    display: flex;
+}
+
+#leftPart, #rightPart, #rentDateInput, #returnDateInput {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+#costDisplaySpan {
+    font-size: 2rem;
+}
+
+.centerContent {
+    text-align: center;
+}
+
+#backToHomeLink {
+    text-align: center;
+}
+
+h1 {
+    display: inline;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}

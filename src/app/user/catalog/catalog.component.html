@@ -1,0 +1,64 @@
+<div id="backToHomeLink">
+    <span class="link" (click)="navigate('home')">Back to home</span>
+</div>
+<div id="searchControls">
+    <span>Search by: </span>
+    <select [(ngModel)]="chosenFilterCriterion">
+        <option value="freeText">Free text</option>
+        <option value="gear">Gear</option>
+        <option value="manufacturer">Manufacturer</option>
+        <option value="model">Model</option>
+        <option value="year">Year</option>
+    </select>
+    <select [(ngModel)]="chosenGear" *ngIf="chosenFilterCriterion == 'gear'">
+        <option value=1>Automatic</option>
+        <option value=0>Manual</option>
+    </select>
+    <span id="dateRangeSpan">
+        Desired rent date:&nbsp;
+        <input type="date" [(ngModel)]="startDate" min="{{initialStartDate}}" />&nbsp;
+        Desired return date:&nbsp;
+        <input type="date" [(ngModel)]="endDate" min={{initialEndDate}} />&nbsp;
+    </span>
+    <input type="text" id="txtSearch" #txtSearch placeholder="Search..." [(ngModel)]="carSearchString"
+        *ngIf="!(chosenFilterCriterion == 'gear')" />
+    <input type="button" value="Search" id="btnSearch" #btnSearch (click)="filterResults()" />
+</div>
+
+<table>
+    <tr>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Daily price</th>
+        <th>Delay price per day</th>
+        <th>Manufacture year</th>
+        <th>Gear</th>
+        <th>Mileage</th>
+        <!-- <th>License plate number</th> -->
+        <th>Location</th>
+        <th>Pic</th>
+    </tr>
+    <tr *ngFor="let i of filteredCarsArray" (click)="selectCar(i)">
+        <td>{{i.manufacturer}}</td>
+        <td>{{i.modelName}}</td>
+        <td>{{i.dailyPrice}}</td>
+        <td>{{i.delayPricePerDay}}</td>
+        <td>{{i.manufactureYear|date: 'yyyy'}}</td>
+        <td>{{i.gear|gear}}</td>
+        <td>{{i.mileage}}</td>
+        <!-- <td>{{i.licensePlateNumber}}</td> -->
+        <td>{{i.branchName}}</td>
+        <td><img src="{{i.pic}}"></td>
+    </tr>
+</table>
+
+<div id="viewedCars">
+    <h3>Previously viewed:</h3>
+    <table class="viewedCarsTable">
+        <tr class="viewedCarsTable">
+            <td class="viewedCarsTable" *ngFor="let i of viewedCarsArray" (click)="selectCar(i)">
+                {{i.manufacturer}}&nbsp;{{i.modelName}}<br /><img src="{{i.pic}}" />
+            </td>
+        </tr>
+    </table>
+</div>

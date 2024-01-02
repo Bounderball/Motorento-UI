@@ -1,0 +1,41 @@
+<h1>Edit user</h1>
+<table>
+    <tr>
+        <th>User name</th>
+        <th>Password</th>
+        <th>Role</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Birth date</th>
+        <th>Sex</th>
+        <th>Email</th>
+        <th>Pic URL</th>
+    </tr>
+    <tr>
+        <td>{{editUser.userName}}</td>
+        <td><input type="text" [(ngModel)]="editUser.password" /></td>
+        <td>
+            <select [(ngModel)]="editUser.role">
+                <option value="user">User</option>
+                <option value="employee">Employee</option>
+                <option value="admin">Admin</option>
+            </select>
+        </td>
+        <td><input type="text" [(ngModel)]="editUser.firstName" /></td>
+        <td><input type="text" [(ngModel)]="editUser.lastName" /></td>
+        <td><input type="date" [(ngModel)]="birthDateString" /></td>
+        <td>
+            <select [(ngModel)]="editUser.sex">
+                <option value=true>Male</option>
+                <option value=false>Female</option>
+            </select>
+        </td>
+        <td><input type="text" [(ngModel)]="editUser.email" /></td>
+        <td><input type="text" [(ngModel)]="editUser.pic"></td>
+    </tr>
+</table>
+
+<div id="bottomPane">
+    <span class="link" (click)="save()">Save</span>
+    <span class="link" (click)="back()">Cancel</span>
+</div>

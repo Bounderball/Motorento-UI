@@ -1,0 +1,30 @@
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+p {
+    text-align: center;
+    font-size: larger;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+span {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 2rem;
+}

@@ -1,0 +1,43 @@
+<table>
+    <tr>
+        <th></th>
+        <th>ID</th>
+        <th>Manufacturer</th>
+        <th>Model Name</th>
+        <th>Daily price</th>
+        <th>Delay price per day</th>
+        <th>Manufacture year</th>
+        <th>Gear</th>
+    </tr>
+    <tr *ngFor="let i of models">
+        <td>
+            <span class="link" (click)="editModel(i)">Edit</span>
+            <br />
+            <span class="link" (click)="deleteModel(i)" >Delete</span>
+        </td>
+        <td>{{i.id}}</td>
+        <td>{{i.manufacturer}}</td>
+        <td>{{i.modelName}}</td>
+        <td>{{i.dailyPrice}}</td>
+        <td>{{i.delayPricePerDay}}</td>
+        <td>{{i.manufactureYear|date: 'yyyy'}}</td>
+        <td>{{i.gear|gear}}</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="link" (click)="addModel()">Add</span>
+        </td>
+        <td></td>
+        <td><input type="text" [(ngModel)]="modelManufacturer" /></td>
+        <td><input type="text" [(ngModel)]="modelModelName" /></td>
+        <td><input type="number" [(ngModel)]="modelDailyPrice" /></td>
+        <td><input type="number" [(ngModel)]="modelDelayPricePerDay" /></td>
+        <td><input type="number" [(ngModel)]="modelManufactureYear" /></td>
+        <td>
+            <select [(ngModel)]="modelGear">
+                <option value=false >Manual</option>
+                <option value=true >Automatic</option>
+            </select>
+        </td>
+    </tr>
+</table>

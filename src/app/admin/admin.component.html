@@ -1,0 +1,9 @@
+<span id="backToHomeLink" class="link" (click)="navigate('user/home')">Back to home</span><br />
+<div>
+    <a [routerLink]="'manage-orders'" class="link" routerLinkActive="chosenLink">Orders</a>
+    <a [routerLink]="'manage-cars'" class="link" routerLinkActive="chosenLink">Cars</a>
+    <a [routerLink]="'manage-models'" class="link" routerLinkActive="chosenLink">Models</a>
+    <a [routerLink]="'manage-users'" class="link" routerLinkActive="chosenLink">Users</a>
+</div>
+<br />
+<router-outlet></router-outlet>

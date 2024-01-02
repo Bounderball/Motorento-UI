@@ -1,0 +1,31 @@
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    display: block;
+    text-align: center;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+label, input {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#costsPane {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.costDisplay {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}

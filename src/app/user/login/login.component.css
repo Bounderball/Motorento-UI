@@ -1,0 +1,15 @@
+#backToHomeLink {
+    text-align: center;
+}
+
+.link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+div, h1 {
+    text-align: center;
+}

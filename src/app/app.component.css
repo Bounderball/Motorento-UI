@@ -1,0 +1,39 @@
+.link {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+span {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#leftDiv {
+    float: left;
+    width: 10rem;
+}
+
+#centerDiv {
+    float: left;
+    /* width: 30rem; */
+}
+
+#rightDiv {
+    float: right;
+    width: 10rem;
+    text-align: center;
+}
+
+#userName {
+    text-align: right;
+    color: blue;
+    font-size: 1.6rem;
+}

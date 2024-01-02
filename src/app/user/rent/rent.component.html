@@ -1,0 +1,50 @@
+<div id="backToHomeLink">
+    <span class="link" (click)="navigate('home')">Back to home</span>
+</div>
+<br />
+<div>
+    <img src="{{currentChosenCar.pic}}"><br />
+</div>
+<div>
+    <table>
+        <tr>
+            <td>{{currentChosenCar.manufacturer}}&nbsp;{{currentChosenCar.modelName}}</td>
+            <td>Location:&nbsp;{{currentChosenCar.branchName}}&nbsp;-&nbsp;{{currentChosenCar.address}}</td>
+        </tr>
+        <tr>
+            <td>{{currentChosenCar.manufactureYear|date: 'yyyy'}}</td>
+            <td>Price per day:&nbsp;{{currentChosenCar.dailyPrice}}</td>
+        </tr>
+        <tr>
+            <td>Gear:&nbsp;{{currentChosenCar.gear|gear}}</td>
+            <td>Price per day of delay:&nbsp;{{currentChosenCar.delayPricePerDay}}</td>
+        </tr>
+        <tr>
+            <td>
+                <label for="inputRentDate">Rent date:</label>&nbsp;
+                <input type="date" id="inputRentDate" #inputRentDate name="inputRentDate"
+                    [(ngModel)]="rentDateString" min="{{this.today}}" />
+            </td>
+            <td>
+                <label for="inputReturnDate">Return date:</label>&nbsp;
+                <input type="date" id="inputReturnDate" #inputReturnDate name="inputReturnDate"
+                    [(ngModel)]="returnDateString" min="{{this.tomorrow}}" />
+            </td>
+        </tr>
+    </table>
+</div>
+<br />
+<div id="costDisplay" *ngIf="this.getProjectedRentCost()">
+    <span id="costDisplaySpan">
+        Your rent price:&nbsp;{{this.getProjectedRentCost()}}
+    </span>
+</div>
+<div class="centerContent">
+    <h1 class="link" *ngIf="!currentUserRole" (click)="goToLogin()">Log in to order</h1>
+    <h1 class="link" *ngIf="currentUserRole" (click)="order();">Make order</h1>
+</div>
+<br />
+<div id="navigationFooter">
+    <span class="link" (click)="navigate('catalog')">Back to catalog</span>
+    <span class="link" (click)="navigate('home')">Back to home page</span>
+</div>

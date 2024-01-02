@@ -1,0 +1,19 @@
+<div id="container">
+    <div id="leftDiv"></div>
+    <div id="centerDiv">
+        <input type="button"
+            *ngIf="!((currentUserRole=='user')||(currentUserRole=='employee')||(currentUserRole=='admin'))" class="link"
+            (click)="navigate(0)" value="Login" />
+        <input type="button"
+            *ngIf="!((currentUserRole=='user')||(currentUserRole=='employee')||(currentUserRole=='admin'))" class="link"
+            (click)="navigate(1)" value="Register" />
+        <input type="button" *ngIf="(currentUserRole=='user')||(currentUserRole=='employee')||(currentUserRole=='admin')" class="link"
+            (click)="navigate(2)" value="Log out" />
+        <input type="button" *ngIf="(currentUserRole=='user')" class="link" (click)="navigate(3)" value="Order history">
+    </div>
+    <div id="rightDiv">
+        <span id="userName" *ngIf="currentUserRole=='user' || currentUserRole == 'employee' || currentUserRole == 'admin'">{{currentUserName}}</span>
+    </div>
+</div>
+<hr>
+<router-outlet></router-outlet>

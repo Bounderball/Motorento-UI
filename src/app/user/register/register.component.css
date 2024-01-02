@@ -1,0 +1,16 @@
+.link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#registerForm {
+    text-align: center;
+    display: block;
+    margin-left: 25%;
+    width: 50%;
+}
+
+#backToHomeLink {
+    text-align: center;
+}

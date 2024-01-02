@@ -1,0 +1,35 @@
+<table>
+    <tr>
+        <th></th>
+        <th>ID</th>
+        <th>Rent date</th>
+        <th>Return date</th>
+        <th>Date returned (Optional)</th>
+        <th>User name</th>
+        <th>Car ID</th>
+    </tr>
+    <tr *ngFor="let i of orders">
+        <td>
+            <span class="link" (click)="editOrder(i)">Edit</span>
+            <br />
+            <span class="link" (click)="deleteOrder(i)" >Delete</span>
+        </td>
+        <td>{{i.id}}</td>
+        <td>{{i.startDate|date}}</td>
+        <td>{{i.endDate|date}}</td>
+        <td>{{i.dateReturned|date}}</td>
+        <td>{{i.userName}}</td>
+        <td>{{i.carId}}</td>
+    </tr>
+    <tr>
+        <td>
+            <span class="link" (click)="addOrder()">Add</span>
+        </td>
+        <td></td>
+        <td><input type="date" [(ngModel)]="orderStartDate" /></td>
+        <td><input type="date" [(ngModel)]="orderEndDate" /></td>
+        <td><input type="date" [(ngModel)]="orderDateReturned" /></td>
+        <td><input type="text" [(ngModel)]="orderUserName" /></td>
+        <td><input type="number" [(ngModel)]="orderCarId" /></td>
+    </tr>
+</table>
